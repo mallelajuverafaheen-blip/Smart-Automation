@@ -1,0 +1,16 @@
+{
+  "name": "smartflow-ai-automation-platform",
+  "version": "1.0.0",
+  "description": "SmartFlow AI: Smart Automation & Resource Intelligence Platform",
+  "private": true,
+  "scripts": {
+    "dev:server": "node server/server.js",
+    "dev:client": "npm.cmd --prefix client run dev",
+    "dev": "concurrently -k -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"node server/server.js\" \"npm.cmd --prefix client run dev\"",
+    "build": "npm.cmd --prefix client run build",
+    "start": "node server/server.js"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
